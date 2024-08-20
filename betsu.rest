@@ -1,0 +1,54 @@
+###
+
+POST http://localhost:3000/members
+Content-Type: application/json
+
+{
+  "name": "Fents"
+}
+
+###
+
+GET http://localhost:3000/members
+
+###
+GET http://localhost:3000/members/66be1ebfcca569893604bcae
+
+###
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+  "user": {
+    "id": "fenn_tonn_user",
+    "password": "wordpass",
+    "customer_id": "IJ101"
+  }
+}
+
+###
+
+DELETE http://localhost:3000/users/6501722e616e0522e890497d
+
+###
+
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+  "client_id": "Betsu-Web",
+  "user": {
+    "id": "test_tom_jha",
+    "password": "password"
+  }
+}
+
+###
+
+GET http://localhost:3000/users/isAuthenticated
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTAzMDU5ZjZmZGY3YTFiZTk2ZTZmNDIiLCJpYXQiOjE2OTQ2OTczODksImV4cCI6MTY5NDcwMzM4OX0.UU_ScJdGM6E69rZecHE-ypIGzSXSEJsu0LHZxkVBAFo
+
+###
+
+GET http://localhost:3000/customers/IJ101
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTAzMDU5ZjZmZGY3YTFiZTk2ZTZmNDIiLCJpYXQiOjE2OTQ2OTczODksImV4cCI6MTY5NDcwMzM4OX0.UU_ScJdGM6E69rZecHE-ypIGzSXSEJsu0LHZxkVBAFo

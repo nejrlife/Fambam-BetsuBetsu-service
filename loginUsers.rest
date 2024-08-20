@@ -1,0 +1,35 @@
+###
+POST http://localhost:3000/loginUsers/register
+Content-Type: application/json
+
+{
+  "memberId": "66be1ecbcca569893604bcb4",
+  "loginUserCreds": {
+    "username": "fenny_ton",
+    "password": "password"
+  }
+}
+
+###
+
+DELETE http://localhost:3000/loginUsers/6501722e616e0522e890497d
+
+###
+
+POST http://localhost:3000/loginUsers/login
+Content-Type: application/json
+
+{
+  "clientId": "Betsu-Web",
+  "loginUser": {
+    "username": "fenny_ton",
+    "password": "password"
+  }
+}
+
+###
+
+GET http://localhost:3000/loginUsers/isAuthenticated
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZlbm55X3RvbiIsImlhdCI6MTcyMzkwODQ5MiwiZXhwIjoxNzIzOTE0NDkyfQ.n8K5KCkBvmjMkvd1xaDSf14AZtpBkTsm9ZGmJjSTBKo
+
+###

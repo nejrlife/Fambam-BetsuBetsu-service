@@ -1,0 +1,20 @@
+###
+
+POST http://localhost:3000/members
+Content-Type: application/json
+
+{
+  "name": "Fents"
+}
+
+###
+
+GET http://localhost:3000/members
+
+###
+GET http://localhost:3000/members/66be1ebfcca569893604bcae
+
+###
+DELETE http://localhost:3000/members/66be20558b670e0c59bfa56f
+
+###

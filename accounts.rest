@@ -1,0 +1,49 @@
+###
+POST http://localhost:3000/accounts/create
+Content-Type: application/json
+
+{
+  "accountName": "2024Apr_QuezonHouseRepair",
+  "contributingMemberIds": [
+    "66be1ecbcca569893604bcb4",
+    "66be1ec7cca569893604bcb2"
+  ]
+}
+
+###
+POST http://localhost:3000/accounts/addExpense
+Content-Type: application/json
+
+{
+  "accountId": "66c0f1b041cbd5da05c2cea6",
+  "loanSharkMemberId": "66be1ec4cca569893604bcb0",
+  "addExpenseDetails": {
+    "name": "Credit card payment",
+    "remarks": "",
+    "selectedMemberIds": [
+      "66be1ebfcca569893604bcae", "66be1ec7cca569893604bcb2"
+    ],
+    "amount": 12345.0
+  }
+}
+
+###
+
+POST http://localhost:3000/accounts/66c0f1b041cbd5da05c2cea6/makePayment
+Content-Type: application/json
+
+{
+  "remarks": "Credit card payment",
+  "paidByMemberId": "66be1ec7cca569893604bcb2",
+  "paidToMemberId": "66be1ec4cca569893604bcb0",
+  "amount": 1234.0
+}
+
+###
+
+GET http://localhost:3000/accounts/getAccountsByMember/66be1ecbcca569893604bcb4
+
+###
+GET http://localhost:3000/accounts/expandAccountDetails/66c0f1b041cbd5da05c2cea6
+
+###
